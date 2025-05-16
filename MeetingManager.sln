@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MeetingManager.API", "MeetingManager.API", "{B1D56F3D-C51F-4945-80EE-F2978387C6D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MeetingManager.Domain", "MeetingManager.Domain", "{810540B5-F554-4875-BEFB-E6D0624CF6F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MeetingManager.Infrastructure", "MeetingManager.Infrastructure", "{C22314B2-F3CE-44EF-A037-70E2463B5D52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MeetingManager.Application", "MeetingManager.Application", "{FD3A45D0-9740-4112-A90D-C04D9D655138}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingManager.API", "MeetingManager.API\MeetingManager.API.csproj", "{2657239F-8154-4F0D-80F8-B33DAA3F6501}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingManager.Application", "MeetingManager.Application\MeetingManager.Application.csproj", "{4316E7F4-F5AE-43C0-8462-25ACE7FD6ED8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingManager.Domain", "MeetingManager.Domain\MeetingManager.Domain.csproj", "{A5331EA7-E9A3-41BA-8A86-F09CBC90AF5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingManager.Infrastructure", "MeetingManager.Infrastructure\MeetingManager.Infrastructure.csproj", "{08DC6790-4BF8-4F3D-B945-1BB2ECFFD149}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2657239F-8154-4F0D-80F8-B33DAA3F6501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2657239F-8154-4F0D-80F8-B33DAA3F6501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2657239F-8154-4F0D-80F8-B33DAA3F6501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2657239F-8154-4F0D-80F8-B33DAA3F6501}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4316E7F4-F5AE-43C0-8462-25ACE7FD6ED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4316E7F4-F5AE-43C0-8462-25ACE7FD6ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4316E7F4-F5AE-43C0-8462-25ACE7FD6ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4316E7F4-F5AE-43C0-8462-25ACE7FD6ED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5331EA7-E9A3-41BA-8A86-F09CBC90AF5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5331EA7-E9A3-41BA-8A86-F09CBC90AF5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5331EA7-E9A3-41BA-8A86-F09CBC90AF5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5331EA7-E9A3-41BA-8A86-F09CBC90AF5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08DC6790-4BF8-4F3D-B945-1BB2ECFFD149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08DC6790-4BF8-4F3D-B945-1BB2ECFFD149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08DC6790-4BF8-4F3D-B945-1BB2ECFFD149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08DC6790-4BF8-4F3D-B945-1BB2ECFFD149}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2657239F-8154-4F0D-80F8-B33DAA3F6501} = {B1D56F3D-C51F-4945-80EE-F2978387C6D2}
+		{4316E7F4-F5AE-43C0-8462-25ACE7FD6ED8} = {FD3A45D0-9740-4112-A90D-C04D9D655138}
+		{A5331EA7-E9A3-41BA-8A86-F09CBC90AF5A} = {810540B5-F554-4875-BEFB-E6D0624CF6F1}
+		{08DC6790-4BF8-4F3D-B945-1BB2ECFFD149} = {C22314B2-F3CE-44EF-A037-70E2463B5D52}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D220716-7820-447C-AB53-D3A87AACC83C}
+	EndGlobalSection
+EndGlobal
