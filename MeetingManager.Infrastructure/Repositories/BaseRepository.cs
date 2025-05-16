@@ -12,11 +12,11 @@ namespace MeetingManager.Infrastructure.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-        protected readonly DbContext _context;
+        protected readonly ApplicationDbContext _context;
         protected readonly DbSet<T> _dbSet;
         protected readonly ILogger<BaseRepository<T>> _logger;
 
-        public BaseRepository(DbContext context, ILogger<BaseRepository<T>> logger)
+        public BaseRepository(ApplicationDbContext context, ILogger<BaseRepository<T>> logger)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
             _dbSet = _context.Set<T>();
@@ -25,7 +25,7 @@ namespace MeetingManager.Infrastructure.Repositories
 
         public IQueryable<T> GetAll()
         {
-            return _dbSet.AsNoTracking();
+            return _dbSet;
         }
 
         public virtual async Task<T> AddAsync(T entity)

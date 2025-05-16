@@ -4,14 +4,21 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>fad6860f-d9a5-4be5-8b02-201602b789a8</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MeetingManager.Application\MeetingManager.Application.csproj" />
     <ProjectReference Include="..\MeetingManager.Domain\MeetingManager.Domain.csproj" />
+    <ProjectReference Include="..\MeetingManager.Infrastructure\MeetingManager.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
