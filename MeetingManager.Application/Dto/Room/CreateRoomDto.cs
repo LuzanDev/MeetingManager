@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MeetingManager.Application.Dto
+namespace MeetingManager.Application.Dto.Room
 {
     public class CreateRoomDto
     {

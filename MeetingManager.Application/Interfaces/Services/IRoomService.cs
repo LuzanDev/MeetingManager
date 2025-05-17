@@ -1,4 +1,4 @@
-﻿using MeetingManager.Application.Dto;
+﻿using MeetingManager.Application.Dto.Room;
 using MeetingManager.Domain.Entity.Result;
 using System;
 using System.Collections.Generic;

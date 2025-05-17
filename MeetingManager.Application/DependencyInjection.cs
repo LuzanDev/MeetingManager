@@ -14,6 +14,7 @@ namespace MeetingManager.Application
         public static void AddApplication(this IServiceCollection services)
         {
             services.AddScoped<IRoomService, RoomService>();
+            services.AddScoped<IBookingService, BookingService>();
         }
     }
 }

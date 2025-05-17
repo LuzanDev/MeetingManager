@@ -1,5 +1,5 @@
 ﻿using MeetingManager.Domain.Entity;
-using MeetingManager.Domain.Repositories;
+using MeetingManager.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
@@ -18,11 +18,6 @@ namespace MeetingManager.Infrastructure.Repositories
         public async Task<bool> ExistsByNameAsync(string name)
         {
             return await _dbSet.AnyAsync(room => room.Name == name);
-        }
-
-        public async Task<List<Room>> GetAllAsync()
-        {
-            return await _dbSet.AsNoTracking().ToListAsync();
         }
     }
 

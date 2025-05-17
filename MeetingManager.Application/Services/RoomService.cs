@@ -1,15 +1,14 @@
-﻿using MeetingManager.Application.Dto;
-using MeetingManager.Domain.Entity;
+﻿using MeetingManager.Domain.Entity;
 using MeetingManager.Domain.Entity.Result;
 using MeetingManager.Domain.Enums;
 using MeetingManager.Domain.Interfaces.Repositories;
 using MeetingManager.Application.Interfaces.Services;
-using MeetingManager.Domain.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MeetingManager.Application.Dto.Room;
 
 namespace MeetingManager.Application.Services
 {
@@ -44,7 +43,7 @@ namespace MeetingManager.Application.Services
         }
         public async Task<CollectionResult<RoomDto>> GetAllAsync()
         {
-            var rooms = await _roomRepository.GetAllAsync();
+            var rooms = await _roomRepository.GetAllAsNoTrackingToListAsync();
             if (rooms == null || !rooms.Any())
             {
                 return new CollectionResult<RoomDto>()

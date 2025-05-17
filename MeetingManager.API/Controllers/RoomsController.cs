@@ -1,16 +1,15 @@
 ﻿using MeetingManager.Domain.Entity.Result;
-using MeetingManager.Application.Dto ;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MeetingManager.Domain.Entity;
-using MeetingManager.Domain.Repositories;
 using MeetingManager.Application.Interfaces.Services;
+using MeetingManager.Application.Dto.Room;
 
 namespace MeetingManager.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/rooms")]
     public class RoomsController : ControllerBase
     {
         private readonly IRoomService _roomService;
@@ -32,9 +31,6 @@ namespace MeetingManager.API.Controllers
             }
             return Ok(new { rooms = response.Data, count = response.Count });
         }
-
-
-
 
         [HttpPost]
         public async Task<ActionResult<RoomDto>> CreateRoom([FromBody] CreateRoomDto dto)

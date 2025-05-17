@@ -12,5 +12,11 @@ namespace MeetingManager.Domain.Enums
         RoomNotFound = 100,
         RoomCollectionNotFound = 101,
         RoomAlreadyExists = 102,
+
+        // 140 - 160 -- Error codes for entity Booking
+        BookingNotFound = 140,
+        BookingCollectionNotFound = 141,
+        BookingAlreadyExists = 142,
+        RoomAlreadyBooked = 143
     }
 }

@@ -1,6 +1,5 @@
 ﻿using MeetingManager.Domain.Entity;
 using MeetingManager.Domain.Interfaces.Repositories;
-using MeetingManager.Domain.Repositories;
 using MeetingManager.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -27,6 +26,9 @@ namespace MeetingManager.Infrastructure
         {
             services.AddScoped<IBaseRepository<Room>, BaseRepository<Room>>();
             services.AddScoped<IRoomRepository, RoomRepository>();
+
+            services.AddScoped<IBaseRepository<Booking>, BaseRepository<Booking>>();
+            services.AddScoped<IBookingRepository, BookingRepository>();
 
         }
     }

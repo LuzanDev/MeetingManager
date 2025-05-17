@@ -1,5 +1,6 @@
 ﻿using MeetingManager.Domain.Exceptions;
 using MeetingManager.Domain.Interfaces.Repositories;
+using MeetingManager.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq.Expressions;
 
 namespace MeetingManager.Infrastructure.Repositories
 {
@@ -23,7 +25,7 @@ namespace MeetingManager.Infrastructure.Repositories
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        public IQueryable<T> GetAll()
+        public IQueryable<T> GetDbSet()
         {
             return _dbSet;
         }
@@ -78,6 +80,16 @@ namespace MeetingManager.Infrastructure.Repositories
                 _logger.LogError(ex, $"Ошибка при удалении сущности {typeof(T).Name} .");
                 throw new DataBaseException($"Ошибка при удалении записи  {typeof(T).Name} из базы данных.", ex);
             }
+        }
+
+        public async Task<List<T>> GetAllAsNoTrackingToListAsync()
+        {
+            return await _dbSet.AsNoTracking().ToListAsync();
+        }
+
+        public async Task<T?> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _dbSet.FirstOrDefaultAsync(predicate);
         }
     }
 }

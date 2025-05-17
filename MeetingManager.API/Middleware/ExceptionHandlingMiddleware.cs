@@ -37,6 +37,7 @@ namespace MeetingManager.API.Middleware
             var (statusCode, message) = exception switch
             {
                 ArgumentNullException => (HttpStatusCode.BadRequest, "Невалидные данные запроса."),
+                NotFoundException => (HttpStatusCode.NotFound, exception.Message),
                 DataBaseException => (HttpStatusCode.InternalServerError, exception.Message), 
                 _ => (HttpStatusCode.InternalServerError, "Произошла внутренняя ошибка.")
             };
